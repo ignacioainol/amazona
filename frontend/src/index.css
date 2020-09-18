@@ -26,6 +26,9 @@ body{
   align-items: center;
   padding: 0.5rem;
 }
+#root{
+  height: 100%;
+}
 .brand a{
   color: #fff;
   font-size: 2.5rem;
