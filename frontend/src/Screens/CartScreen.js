@@ -34,8 +34,10 @@ function CartScreen(props) {
                     cartItems.length === 0 ?
                         <div>Cart is Empty</div> :
                         cartItems.map(item =>
-                            <div key={item.id}>
-                                <img src={item.image} alt="product" />
+                            <li>
+                                <div className="cart-image">
+                                    <img src={item.image} alt="product" />
+                                </div>
                                 <div className="cart-name">
                                     <div>
                                         {item.name}
@@ -48,11 +50,11 @@ function CartScreen(props) {
                                             <option value="3">3/</option>
                                         </select>
                                     </div>
-                                    <div>
+                                    <div className="cart-price">
                                         {item.price}
                                     </div>
                                 </div>
-                            </div>)
+                            </li>)
                 }
             </ul>
         </div>
@@ -62,7 +64,9 @@ function CartScreen(props) {
                 :
                 $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
             </h3>
-            <button className="button primary"></button>
+            <button className="button primary" disabled={cartItems.length === 0}>
+                Proceed to Checkout
+            </button>
         </div>
     </div>
 }
