@@ -10,10 +10,10 @@ function ProductsScreen(props) {
     const [image, setImage] = useState('');
     const [brand, setBrand] = useState('');
     const [category, seCategory] = useState('');
-    const [countInStock, setPrice] = useState('');
-    const [description, setPrice] = useState('');
-    const [rating, setPrice] = useState('');
-    const [numReviews, setPrice] = useState('');
+    const [countInStock, setCountInStock] = useState('');
+    const [description, setDescription] = useState('');
+    const [rating, setRating] = useState('');
+    const [numReview, setNumReview] = useState('');
     const productSave = useSelector(state => state.userSignin);
     const { loading: loadingSave, success: successSave, error: errorSave } = userSignin;
     const dispatch = useDispatch();
@@ -45,6 +45,32 @@ function ProductsScreen(props) {
                 <li>
                     <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="price">Price</label>
+                    <input type="text" name="price" id="price" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="name">Brand</label>
+                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="name">Category</label>
+                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="name">Rating</label>
+                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="name">Num Reviews</label>
+                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                </li>
+                <li>
+                    <label htmlFor="name">Description</label>
+                    <textarea type="text" name="name" id="name" onChange={(e) => setDescription(e.target.value)}>
+
+                    </textarea>
                 </li>
                 <li>
                     <label htmlFor="email">Password</label>
