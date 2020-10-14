@@ -8,12 +8,12 @@ function ProductsScreen(props) {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [image, setImage] = useState('');
-    const [brand, setCategory] = useState('');
-    const [price, setPrice] = useState('');
-    const [price, setPrice] = useState('');
-    const [price, setPrice] = useState('');
-    const [price, setPrice] = useState('');
-    const [price, setPrice] = useState('');
+    const [brand, setBrand] = useState('');
+    const [category, seCategory] = useState('');
+    const [countInStock, setPrice] = useState('');
+    const [description, setPrice] = useState('');
+    const [rating, setPrice] = useState('');
+    const [numReviews, setPrice] = useState('');
     const productSave = useSelector(state => state.userSignin);
     const { loading: loadingSave, success: successSave, error: errorSave } = userSignin;
     const dispatch = useDispatch();
