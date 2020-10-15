@@ -29,7 +29,7 @@ function ProductsScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(saveProduct({ name, price }));
+        dispatch(saveProduct({ name, price, image, brand, category, countInStock, description, rating, numReview }));
     }
 
     return <div className="form">
@@ -48,27 +48,27 @@ function ProductsScreen(props) {
                 </li>
                 <li>
                     <label htmlFor="price">Price</label>
-                    <input type="text" name="price" id="price" onChange={(e) => setName(e.target.value)} />
+                    <input type="text" name="price" id="price" onChange={(e) => setPrice(e.target.value)} />
                 </li>
                 <li>
-                    <label htmlFor="name">Brand</label>
-                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                    <label htmlFor="brand">Brand</label>
+                    <input type="text" name="brand" id="brand" onChange={(e) => setBrand(e.target.value)} />
                 </li>
                 <li>
-                    <label htmlFor="name">Category</label>
-                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                    <label htmlFor="category">Category</label>
+                    <input type="text" name="category" id="category" onChange={(e) => setCategory(e.target.value)} />
                 </li>
                 <li>
-                    <label htmlFor="name">Rating</label>
-                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                    <label htmlFor="rating">Rating</label>
+                    <input type="text" name="rating" id="rating" onChange={(e) => setRating(e.target.value)} />
                 </li>
                 <li>
                     <label htmlFor="name">Num Reviews</label>
-                    <input type="text" name="name" id="name" onChange={(e) => setName(e.target.value)} />
+                    <input type="text" name="" id="name" onChange={(e) => setName(e.target.value)} />
                 </li>
                 <li>
                     <label htmlFor="name">Description</label>
-                    <textarea type="text" name="name" id="name" onChange={(e) => setDescription(e.target.value)}>
+                    <textarea name="description" id="description" onChange={(e) => setDescription(e.target.value)}>
 
                     </textarea>
                 </li>
