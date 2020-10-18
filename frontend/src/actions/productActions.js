@@ -14,7 +14,7 @@ const listProducts = () => async (dispatch) => {
     }
 }
 
-const saveProduct = (product) = async (dispatch, getState) => {
+const saveProduct = (product) => async (dispatch, getState) => {
     try {
         dispatch({ type: PRODUCT_SAVE_REQUEST, payload: product });
         const { userSignIn: { userInfo } } = getState();
