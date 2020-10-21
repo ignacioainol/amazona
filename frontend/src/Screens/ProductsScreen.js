@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import { saveProduct } from '../actions/productActions';
 import { signin } from '../actions/userActions'
 
@@ -15,8 +15,8 @@ function ProductsScreen(props) {
     const [description, setDescription] = useState('');
     const [rating, setRating] = useState('');
     const [numReview, setNumReview] = useState('');
-    const productSave = useSelector(state => state.userSignin);
-    const { loading: loadingSave, success: successSave, error: errorSave } = signin;
+    const productSave = useSelector(state => state.productSave);
+    const { loading: loadingSave, success: successSave, error: errorSave } = productSave;
     const dispatch = useDispatch();
 
     useEffect(() => {
